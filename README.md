@@ -1,4 +1,4 @@
 # pong
 Jeu pong tout simplement
 
-https://RedDarkS.github.io/pong/index.html
+https://SPARTS301.github.io/pong/index.html
