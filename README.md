@@ -1,1 +1,4 @@
-# Pong https://sparts301.github.io/Pong
+# pong
+Jeu pong tout simplement
+
+https://RedDarkS.github.io/pong/index.html

@@ -1,10 +1,11 @@
-body{
-    /** couleurs & font **/
-    background-color: #000;
-    color: #fff;
+/** id > class **/
+body {
+    /** Fond noir, couleur blanche et typographie monospace **/
+    background-color: #000000;
+    color: #ffffff;
     font-family: monospace;
 
-    /** centering **/
+    /** permet de centrer les elements dans la page **/
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -13,59 +14,85 @@ body{
     text-align: center;
 }
 
-#terrain{
-    /** bordure blanche visible **/
+/** parametrage du ou des "objets" terrain **/
+#terrain {
     position: relative;
-    border-top : 1px solid white;
-    border-bottom : 1px solid white;
 
-    /** dimension terrain**/
+    border: 1px solid #000;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+
     width: 800px;
     height: 400px;
-
 }
 
-.tilt{
-    border-color:  rgb(0, 255, 0) !important;
-
+.tiltHaut {
+    border-top-color: rgb(0, 250, 0) !important;
 }
 
-#balle{
+.tiltBas {
+    border-bottom-color: rgb(0, 250, 0) !important;
+}
+.tiltGauche {
+    border-left-color: rgb(250, 0, 0) !important;
+}
+
+.tiltDroite {
+    border-right-color: rgb(250, 0, 0) !important;
+}
+
+/** parametrage du ou des "objets" balle **/
+#balle {
     position: absolute;
-
-    /** la balle est au centre**/
     top: 50%;
     left: 50%;
 
-    /** Design de la balle **/
-    border-radius: 10px;
+    border-radius: 100%;
     width: 20px;
     height: 20px;
     background-color: rgb(255, 255, 255);
 }
 
-.raquette{
+/** parametrage du ou des "objets" raquette **/
+.raquette {
     position: absolute;
 
-    --hauteur : 25%;
+    --hauteur: 25%; /** definir une variable **/
 
-    top : calc( 50% - var(--hauteur)/2 ); /** milieu de page */
+    top: calc(50% - var(--hauteur) / 2); /** clac, faire des calculs en css // var utiliser la variable **/
 
-    /** design**/
     width: 10px;
-    height : var(--hauteur);
-    background-color: rgb(255, 255, 255);
-
+    height: var(--hauteur);
+    background-color: #fff;
+}
+.tiltRaquette{
+    background-color: rgb(0, 0, 255) !important;
 }
 
-/** raquettes gauche et droite**/
-
-#gauche{
-
+#droite {
     right: 1%;
 }
 
-#droite{
-    
+#gauche {
     left: 1%;
+}
+
+/** parametrage pour affichage du score **/
+.score{
+    display: flex;
+    padding-top: 20%;
+    text-align: center;
+    font-size: 40px;
+}
+
+#Sgauche{
+    padding-left: 25%;
+    float:left;
+    color: orange;
+}
+
+#Sdroite{
+    padding-right: 25%;
+    float:right;
+    color: deepskyblue;
 }
