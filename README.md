@@ -1,4 +1,4 @@
 # pong
-Jeu pong tout simplement
+Jeu pong en js
 
 https://SPARTS301.github.io/Pong/index.html
